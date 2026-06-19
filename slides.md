@@ -1,15 +1,20 @@
 ---
 # try also 'default' to start simple
 theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://source.unsplash.com/collection/94734566/1920x1080
+# solid color background — do NOT use remote image URLs (they hang the
+# in-browser dev server). source.unsplash.com is also shut down.
+background: '#0f172a'
 # apply any windi css classes to the current slide
 class: 'text-center'
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
 # show line numbers in code blocks
 lineNumbers: false
+# Disable monaco-editor — its huge dependency graph stalls the in-browser
+# Vite optimizeDeps step before the dev server can bind a port.
+monaco: false
+# Do NOT download remote assets at startup (would block the dev server).
+remoteAssets: false
 # some information about the slides, markdown enabled
 info: |
   ## Slidev Starter Template
@@ -108,8 +113,7 @@ Hover on the bottom-left corner to see the navigation's controls panel, [learn m
 <p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
 
 ---
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+layout: default
 ---
 
 # Code

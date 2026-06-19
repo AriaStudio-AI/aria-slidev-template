@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "slidev",
+    "dev": "slidev --port 3030",
     "build": "slidev build",
     "export": "slidev export"
   },
@@ -9,5 +9,8 @@
     "@slidev/cli": "latest",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest"
+  },
+  "devDependencies": {
+    "@iconify/json": "latest"
   }
 }
